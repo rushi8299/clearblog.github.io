@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_url":"mysql://root:@localhost/condingthunder",
+    "prod_url":"mysql://root:@localhost/condingthunder",
+    "fb_url":"https://facebook.com/rushikeshruikar",
+    "tw_url":"https://twitter.com/rushiruikar",
+    "gh_url":"https://instagram.com/ruikar.rushikesh/",
+    "head_name": "Reliance Blog",
+    "blog_name": "Blog",
+    "tag_line": "A blog liked by reliance users",
+    "gmail-user": "rushiruikar008@gmail.com",
+    "gmail-password": "strange@821999",
+    "no_of_posts": "1",
+    "about_text": "Hi my name is harry and I create programming tutorials and I am a good boy",
+    "admin_user": "rushi@gmail.com",
+    "admin_pass": "sss",
+    "upload_location": " B:\\clearBlog"
+
+  }
+}

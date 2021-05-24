@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('  {{ url_for('static', filename='img/home-bg.jpg') }}  ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Panel</h1>
+            <span class="subheading">Manage your posts and change them</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <h3>Basic Actions</h3>
+          <a href="/edit/0"><button class="btn btn-primary"> Add New Posts</button></a>
+          <a href="/logout"> <button class="btn btn-primary"> Logout </button></a>
+          <hr>
+          <h4>File Upload/</h4>
+          <form>
+              <input type="file" name="file1">
+              <button type="submit" class="btn btn-primary"> Submit </button>
+
+          </form>
+          <hr>
+          <h3>Edit Posts</h3>
+          <table class="table" border="1">
+              <thead>
+              <tr>
+                  <th>sno</th>
+                  <th>title</th>
+                  <th>date</th>
+                  <th>edit</th>
+                  <th>delete</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for posts in posts %}
+              <tr>
+                  <td>{{posts.sno}}</td>
+                  <td>{{posts.title}}</td>
+                  <td>{{posts.date}}</td>
+                  <td>
+                      <a href="/edit/{{posts.sno}}"><button class="btn btn-primary">Edit</button></a>
+                  </td>
+                  <td>
+                      <a href="/delete/{{posts.sno}}"><button class="btn btn-primary">Delete</button></a>
+                  </td>
+              </tr>
+              {% endfor %}
+              </tbody>
+          </table>
+      </div>
+    </div>
+ </div>
+
+
+
+
+
+ {% endblock %}.
